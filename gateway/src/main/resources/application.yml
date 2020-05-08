@@ -1,0 +1,24 @@
+#把网关注册到注册中心,就可以通过服务名来访问了(开启微服务的转发)[spring.cloud.gateway.discovery.locator.lower-case-service-id=true,开启服务名(服务id)小写,默认是大写]
+server:
+  port: 9002
+spring:
+  application:
+    name: gateway9002
+  cloud:
+    gateway:
+      routes:
+        - id: product
+          uri: http://127.0.0.1:8083
+          predicates:
+          - Path=/**
+      discovery:
+        locator:
+          enabled: true
+#设置注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9091/eureka/
+  instance:
+    instance-id: gateway-9002
+    prefer-ip-address: true
