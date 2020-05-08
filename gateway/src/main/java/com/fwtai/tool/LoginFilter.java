@@ -28,6 +28,12 @@ public class LoginFilter implements GlobalFilter, Ordered{
     @Override
     public Mono<Void> filter(final ServerWebExchange exchange,final GatewayFilterChain chain){
         System.out.println("拦截……");
+        /*final ServerHttpRequest request = exchange.getRequest();
+        String token = request.getQueryParams().getFirst("token");
+        if(token == null || token.length() <=0){
+            exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);//此时网页显示 该网页无法正常运作,同时会有这样的 HTTP ERROR 401 提示
+            return exchange.getResponse().setComplete();
+        }*/
         return chain.filter(exchange);//如果不符合就放行
     }
 }
