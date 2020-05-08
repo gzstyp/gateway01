@@ -8,7 +8,8 @@ spring:
     gateway:
       routes:
         - id: product
-          uri: http://127.0.0.1:8083
+          #uri: http://127.0.0.1:8083,改用服务名来访问,大写的服务名,默认就是大写的(它和下面的discovery的配置是一样的效果)
+          uri: lb://PRODUCTCENTER
           predicates:
           - Path=/**
       discovery:
