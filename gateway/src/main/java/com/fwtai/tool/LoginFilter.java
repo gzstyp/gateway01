@@ -22,9 +22,10 @@ public class LoginFilter implements GlobalFilter, Ordered{
     // 因为可以定义多个过滤器，所以返回的数字越小就越先执行
     @Override
     public int getOrder(){
-        return -256;
+        return 0;
     }
 
+    //只传一个参数时调用两次???,多个参数就仅调用一次???
     @Override
     public Mono<Void> filter(final ServerWebExchange exchange,final GatewayFilterChain chain){
         System.out.println("拦截……");

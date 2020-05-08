@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.1.RELEASE</version>
+        <version>2.1.12.RELEASE</version>
         <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -37,13 +37,19 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
-            <version>2.1.1.RELEASE</version>
+            <version>2.1.5.RELEASE</version>
         </dependency>
         <!--把网关注册到注册中心(的依赖),就可以通过服务名来访问了(开启微服务的转发),注意这里不能用spring-cloud-starter-netflix-eureka-server-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             <version>2.1.1.RELEASE</version>
+        </dependency>
+        <!--限流-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+            <version>2.1.12.RELEASE</version>
         </dependency>
     </dependencies>
 </project>

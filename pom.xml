@@ -25,6 +25,7 @@
         <module>product8081</module>
         <module>product8083</module>
         <module>usercenter</module>
+        <module>usercenter8073</module>
         <module>gateway</module>
     </modules>
     <properties>
