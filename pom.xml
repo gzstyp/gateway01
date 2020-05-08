@@ -6,6 +6,13 @@
     <artifactId>gateway01</artifactId>
     <packaging>pom</packaging>
     <version>v1.0.0</version>
+
+    <description>
+
+        启动顺序是先启动 '注册中心' --> 微服务 --> 网关
+
+    </description>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>

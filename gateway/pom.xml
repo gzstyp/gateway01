@@ -13,7 +13,11 @@
 
     <description>
 
-        他只是个网关，所以仅需一个依赖 spring-cloud-starter-gateway 即可,不需要web之类的东东
+        他只是个网关，所以需依赖 spring-cloud-starter-gateway 即可,不需要web之类的东东
+
+        利用网关可以过滤、断言、鉴权
+
+        启动顺序是先启动 '注册中心' --> 微服务 --> 网关
 
     </description>
 
